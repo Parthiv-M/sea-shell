@@ -1,0 +1,11 @@
+NAME
+	spchk -- check text file for spelling mistakes
+
+SYNOPSIS
+	spchk FILE_NAME
+
+DESCRIPTION
+	check the text file for any spelling mistakes made. If found report the mistake made and provide a suggestion
+
+AUTHOR
+	Jayanth Shanmugam

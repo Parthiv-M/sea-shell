@@ -1,0 +1,16 @@
+MKDIR(1)                                                                              User Commands                                                                              MKDIR(1)
+
+NAME
+	makedir -- make a directory
+
+SYNOPSIS
+	makedir PARENT_DIRECTORY DIRECTORY_NAME
+
+DESCRIPTION
+	Create a directory in the PARENT_DIRECTORY with the name DIRECTORY_NAME, if they donot already exist
+
+	optional parameters
+		perm -- permissions for the created directory(default = 0777)
+
+AUTHOR
+	Jayanth Shanmugam	

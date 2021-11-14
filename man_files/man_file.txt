@@ -1,0 +1,11 @@
+FILE						<CUSTOM SHELL NAME> COMMAND MANUAL							FILE
+
+
+HISTORY
+
+LEGAL NOTICE
+
+RETURN CODE
+    file returns 0 on success, and non-zero on error.
+
+BUGS

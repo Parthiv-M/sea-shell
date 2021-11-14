@@ -1,0 +1,5 @@
+Usage: file [FILE...]
+Determine type of FILEs
+
+    --help              display this help and exit
+    --version           output version information and exit

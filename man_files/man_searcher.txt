@@ -1,0 +1,28 @@
+SEARCHER						<CUSTOM SHELL NAME> COMMAND MANUAL							SEARCHER
+
+NAME
+	searcher — search for a file in any directory with its file name
+
+SYNOPSIS
+	searcher file 
+	searcher [--help]
+
+DESCRIPTION
+	This manual page documents version 1.0.0 of the searcher command. The entire path of the first file with the matching name will be printed.
+
+	The path is printed along with the file extension of the corresponding file found.
+
+	If a file with the given file name is not found, an error message is printed.
+
+HISTORY
+
+LEGAL NOTICE
+
+RETURN CODE
+	searcher returns 0 on success, and non-zero on error.
+
+BUGS
+
+
+	
+

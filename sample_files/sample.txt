@@ -1,0 +1,3 @@
+Oh I didn't know that! It wrks flawlessly, but I was wondering if there is not a way of doing this the other way: 
+instead of adding a global variable to access the function from the global scope, isn't there a way of accessing the module scope from the HTML? 
+Or maybe some other way like adding the hand

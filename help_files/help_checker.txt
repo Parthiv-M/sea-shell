@@ -1,0 +1,5 @@
+Usage: checker [FILE...]
+Check a text file for spelling mistakes
+
+    --help              display this help and exit
+    --version           output version information and exit
