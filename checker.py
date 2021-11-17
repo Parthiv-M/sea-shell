@@ -3,7 +3,14 @@ import sys
 
 def spell_check(fname):
 
-    """Function to read a text file one word at a time and check for spelling mistakes, if found report the mistake and provide a suggestion."""
+    """
+    Function to read a text file one word at a time and check for spelling mistakes, if found report the mistake and provide a suggestion.
+    ...
+    Parameters
+    ----------
+    fname : str
+        The name of the file to check for spelling mistakes
+    """
     
     base_url = "https://api.textgears.com/spelling"
     params = {"key" : "7Py3b8Y9cVjEeAp1", "text" : ""}

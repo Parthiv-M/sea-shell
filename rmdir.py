@@ -1,8 +1,17 @@
 import os
 import sys
 
-def remdir(directory,dir_name):
-    """Function to take a parent directory, directory name as parameters and remove a directory at the specified parent directory."""
+def remdir(directory, dir_name):
+    
+    """
+    Function to take a parent directory, directory name as parameters and remove a directory at the specified parent directory.
+    ...
+    Parameters
+    ----------
+    directory : str 
+        Name of the parent directory
+    """
+    
     path = os.path.join(directory,dir_name)
     os.rmdir(path)
     print("Directory removed successfully!\n")

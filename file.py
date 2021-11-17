@@ -3,6 +3,16 @@ import os
 import magic
 
 def file_command(file_name):
+
+    """
+    Function to find out information about the file
+    ...
+    Parameters
+    ----------
+    file_name : str
+        The name of the file to extract information
+    """
+
     file_path = os.getcwd() + '/' + file_name
     if(os.path.exists(file_path) == False):
         print(file_name + ': Cannot open \'' + file_name + '\' (No such file or directory)')

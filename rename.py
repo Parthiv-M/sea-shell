@@ -2,6 +2,18 @@ import os
 import sys
 
 def rnm(old_nm, new_nm):
+    
+    """
+    Function to rename an existing file or directory
+    ...
+    Parameters
+    ----------
+    old_nm : str 
+        Old name of the file or directory
+    new_nm : str 
+        New name of the file or directory
+    """
+    
     os.rename(old_nm,new_nm);
     print("Rename successful!\n")
 

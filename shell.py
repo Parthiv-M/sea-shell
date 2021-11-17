@@ -3,7 +3,9 @@ from os import system
 shell_commands = ["help", "man", "searcher", "file", "checker", "mkdir", "rmdir", "rename", "clear", "exit"]
 
 def shell_help():
-    print("I am supposed to help the user")
+    f = open('startup_files/startup.txt', 'r')        
+    print(f.read())
+    print('\n')
 
 def shell():
     startup = 1
@@ -11,9 +13,8 @@ def shell():
         if startup == 1:
             startup = startup + 1
             _ = system('clear')
+            shell_help()
 
-        # add code for startup of shell here
-        
         userinput = input("\033[1msea-shell@\033[94muser\033[0m$ ")
         input_arr = userinput.split()
 
@@ -44,9 +45,11 @@ def shell():
                 system('python3 rename.py ' + input_arr[1] + input_arr[2])
             if len(input_arr) == 2:
                 system('python3 rename.py ' + input_arr[1])
-        elif(input_arr[0] == shell_commands[8]):
+        elif(input_arr[0] == shell_commands[8]):  # clear command
             _ = system('clear')
-        elif(input_arr[0] == shell_commands[9]):
+        elif(input_arr[0] == shell_commands[9]):  # exit command
             exit(0)
+        else:
+            print(input_arr[0] + ": command not found")
 
 shell()

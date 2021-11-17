@@ -1,8 +1,19 @@
 import os
 import sys
 
-def makedir(directory,dir_name):
-    """Function to take a parent directory, directory name, permissions as parameters and create a directory at the specified parent directory."""
+def makedir(directory, dir_name):
+
+    """
+    Function to take a parent directory, directory name, permissions as parameters and create a directory at the specified parent directory.
+    ...
+    Parameters
+    ----------
+    directory : str 
+        parent directory to create the new directory
+    dir_name : str 
+        name for the new directory being created 
+    """
+
     path = os.path.join(directory,dir_name)
     os.mkdir(path)
     print("Directory created successfully!\n")
