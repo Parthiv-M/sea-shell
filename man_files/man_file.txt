@@ -1,11 +1,17 @@
-FILE						<CUSTOM SHELL NAME> COMMAND MANUAL							FILE
+FILE						SEA SHELL COMMAND MANUAL							FILE
 
+NAME
+    file — determine file type
 
-HISTORY
+SYNOPSIS
+    file FILENAME
+    file [--help]
 
-LEGAL NOTICE
+DESCRIPTION
+    file tests each argument in an attempt to classify it
+
+AUTHOR
+    Parthiv Menon
 
 RETURN CODE
     file returns 0 on success, and non-zero on error.
-
-BUGS

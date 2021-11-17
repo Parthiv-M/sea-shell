@@ -1,11 +1,14 @@
+CHECKER						SEA SHELL COMMAND MANUAL							CHECKER
+
 NAME
-	spchk -- check text file for spelling mistakes
+	checker -- check text file for spelling mistakes
 
 SYNOPSIS
-	spchk FILE_NAME
+	checker FILE_NAME
+	checker [--help]
 
 DESCRIPTION
-	check the text file for any spelling mistakes made. If found report the mistake made and provide a suggestion
+	Check the text file for any spelling mistakes made. If found, report the mistake made and provide a suggestion
 
 AUTHOR
 	Jayanth Shanmugam

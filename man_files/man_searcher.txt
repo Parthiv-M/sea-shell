@@ -1,4 +1,4 @@
-SEARCHER						<CUSTOM SHELL NAME> COMMAND MANUAL							SEARCHER
+SEARCHER						SEA SHELL COMMAND MANUAL							SEARCHER
 
 NAME
 	searcher — search for a file in any directory with its file name
@@ -14,15 +14,8 @@ DESCRIPTION
 
 	If a file with the given file name is not found, an error message is printed.
 
-HISTORY
-
-LEGAL NOTICE
+AUTHOR
+	Parthiv Menon
 
 RETURN CODE
 	searcher returns 0 on success, and non-zero on error.
-
-BUGS
-
-
-	
-

@@ -1,10 +1,11 @@
-RMDIR(1)                                                                              User Commands                                                                              RMDIR(1)
+RMDIR(1)                        SEA SHELL COMMAND MANUAL                                       RMDIR(1)
 
 NAME
 	rmdir -- remove a directory
 
 SYNOPSIS
 	rmdir PARENT_DIRECTORY DIRECTORY_NAME
+	rmdir [--help]
 
 DESCRIPTION
 	Remove a directory in the PARENT_DIRECTORY with the name DIRECTORY_NAME, if they exist
