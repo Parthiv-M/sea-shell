@@ -1,0 +1,25 @@
+
+░██████╗███████╗░█████╗░  ░██████╗██╗░░██╗███████╗██╗░░░░░██╗░░░░░
+██╔════╝██╔════╝██╔══██╗  ██╔════╝██║░░██║██╔════╝██║░░░░░██║░░░░░
+╚█████╗░█████╗░░███████║  ╚█████╗░███████║█████╗░░██║░░░░░██║░░░░░
+░╚═══██╗██╔══╝░░██╔══██║  ░╚═══██╗██╔══██║██╔══╝░░██║░░░░░██║░░░░░
+██████╔╝███████╗██║░░██║  ██████╔╝██║░░██║███████╗███████╗███████╗
+╚═════╝░╚══════╝╚═╝░░╚═╝  ╚═════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚══════╝
+
+You are Lost at Sea and stumble upon a wreckage. The wreckage flickers to life in your hands.
+
+Welcome to the Sea Shell. The crew will now take you through the process of operating this shell.
+
+Command Help
+============
+- mkdir : Creates a new directory
+- rmdir : Removes an existing empty directory 
+- rename : Renames an existing directory 
+- file : Returns information about a file 
+- checker : Checks for spelling mistakes in a text file 
+- searcher : Searches for a file in the file system 
+
+For further information on individual commands, try running the commands with the --help flag. Every command
+has its own manual page as well.
+
+Bon Voyage!
