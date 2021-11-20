@@ -1,0 +1,35 @@
+import psutil
+import os
+import sys
+def free_proc(pid):
+    flag = 0
+    for proc in psutil.process_iter():
+        if pid == proc: flag = 1
+    if flag == 0: 
+        print('The given PID is not a valid PID of a running process:\'',pid,'\'')
+        return
+    proc = psutil.Process(pid)
+    print('Memory info of Process \'', pid,'\':')
+    mem = proc.memory_info()
+    print('VM memory used by process: ', mem.vms)
+    print('Shared Memory Usage: ', mem.shared)
+    print('Percentage of memory used by Process: ', proc.memory_percent())
+
+def free():
+    vm = psutil.virtual_memory()
+    sm = psutil.swap_memory()
+    print('   \tTotal\t\tUsed\t\tFree\t\tBuffers\t\tCached\t\tShared\t\t\n')
+    print('Mem: \t',vm.total,'\t',vm.used,'\t',vm.free,'\t',vm.buffers,'\t',vm.cached,'\t',vm.shared)
+    print('Swap:\t',sm.total,'\t',sm.used,'\t',sm.free)
+
+if(sys.argv[1] == '--help'):
+    f = open('help_files/help_free.txt', 'r')
+    print(f.read())
+elif(sys.argv[1] == "man"):
+    f = open('man_files/man_free.txt', 'r')
+    print(f.read())
+else:
+    if(len(sys.argv)==2):
+        free_proc(sys.argv[1])
+    else: free()
+# free_proc(os.getpid())
