@@ -1,0 +1,7 @@
+Usage:  lsof [DIR_PATH]
+    
+View the list of open files in a given directory, along with PID of openning process, and name of process.
+#cannot identify .txt files yet
+
+    --help              display this help and exit
+   
