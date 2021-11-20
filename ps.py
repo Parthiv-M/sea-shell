@@ -1,7 +1,25 @@
+import sys
 import psutil
 
-print("PID     NAME            CPU%")
-print('-----------------------------')
-for proc in psutil.process_iter():
-    procs_info = proc.as_dict(attrs = ['pid','name','cpu_percent'])
-    print("{}     {}              {}".format(procs_info['pid'],procs_info['name'],procs_info['cpu_percent']))
+def ps():
+
+    """
+    Function to print the processes running on the system with their process IDs.
+    """
+
+    print("PID\t\tNAME\t\t\t\t\t\tCPU%")
+    print('---------------------------------------------------------------------')
+    for proc in psutil.process_iter():
+        procs_info = proc.as_dict(attrs = ['pid','name','cpu_percent'])
+        print("{}\t\t{:40s}\t{:1.1}".format(procs_info['pid'], procs_info['name'], procs_info['cpu_percent']))
+
+if(len(sys.argv) == 1):
+    ps()
+elif(len(sys.argv) == 2):
+    if(sys.argv[1] == '--help'):
+        f = open('help_files/help_ps.txt', 'r')
+        print(f.read())
+    elif(sys.argv[1] == "man"):
+        f = open('man_files/man_ps.txt', 'r')
+        print(f.read())
+

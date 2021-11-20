@@ -1,7 +1,7 @@
 FREE						SEA SHELL COMMAND MANUAL							FREE
 
 NAME
-	free — Display amount of free memory and used memory in the system
+	free -- Display amount of free memory and used memory in the system
 
 SYNOPSIS
 	free [pid] 

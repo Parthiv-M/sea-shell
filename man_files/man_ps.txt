@@ -1,0 +1,13 @@
+PS(1)                                    SEA SHELL COMMAND MANUAL                                      PS(1)
+
+NAME
+	ps -- display processes
+
+SYNOPSIS
+	ps [options]
+
+DESCRIPTION
+	display a list of all the active processes along with their process ID, name and CPU percent.
+
+AUTHOR
+	Jayanth Shanmugam

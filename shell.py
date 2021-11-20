@@ -1,6 +1,19 @@
 from os import system
 
-shell_commands = ["help", "man", "searcher", "file", "checker", "mkdir", "rmdir", "rename", "clear", "exit"]
+shell_commands = [
+    "help", 
+    "man", 
+    "searcher", 
+    "file", 
+    "checker", 
+    "mkdir", 
+    "rmdir", 
+    "rename", 
+    "free",
+    "ps",
+    "clear", 
+    "exit"
+]
 
 def shell_help():
     f = open('startup_files/startup.txt', 'r')        
@@ -20,7 +33,7 @@ def shell():
 
         if(input_arr[0] == shell_commands[0]): # shell help
             shell_help()
-        elif(len(input_arr) == 1 and (input_arr[0] in shell_commands) and input_arr[0] != 'exit' and input_arr[0] != 'clear'):
+        elif(len(input_arr) == 1 and (input_arr[0] in shell_commands) and input_arr[0] != 'exit' and input_arr[0] != 'clear' and input_arr[0] != 'free' and input_arr[0] != 'ps'):
             system('python3 ' + input_arr[0] + '.py --help')
         elif(input_arr[0] == shell_commands[1]):
             system('python ' + input_arr[1] + '.py ' + input_arr[0]) # man page for every command
@@ -38,16 +51,28 @@ def shell():
         elif(input_arr[0] == shell_commands[6]):  # remove directory command
             if len(input_arr) == 3:
                 system('python3 rmdir.py ' + input_arr[1] + input_arr[2])
-            if len(input_arr) == 2:
+            elif len(input_arr) == 2:
                 system('python3 rmdir.py ' + input_arr[1])
         elif(input_arr[0] == shell_commands[7]):  # rename command
             if len(input_arr) == 3:
                 system('python3 rename.py ' + input_arr[1] + input_arr[2])
-            if len(input_arr) == 2:
+            elif len(input_arr) == 2:
                 system('python3 rename.py ' + input_arr[1])
-        elif(input_arr[0] == shell_commands[8]):  # clear command
+        elif(input_arr[0] == shell_commands[8]):  # free command
+            if len(input_arr) == 3:
+                system('python3 free.py ' + input_arr[1] + input_arr[2])
+            elif len(input_arr) == 2:
+                system('python3 free.py ' + input_arr[1])
+            elif len(input_arr) == 1:
+                system('python3 free.py')
+        elif(input_arr[0] == shell_commands[9]):  # ps command
+            if len(input_arr) == 2:
+                system('python3 ps.py ' + input_arr[1])
+            else: 
+                system('python3 ps.py')
+        elif(input_arr[0] == shell_commands[10]):  # clear command
             _ = system('clear')
-        elif(input_arr[0] == shell_commands[9]):  # exit command
+        elif(input_arr[0] == shell_commands[11]):  # exit command
             exit(0)
         else:
             print(input_arr[0] + ": command not found")

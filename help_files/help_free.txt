@@ -1,7 +1,4 @@
-Usage: 
-    1. free 
-    2. free [PID]
-    
+Usage: free 
 View Memory usage information of the entire system, or a given process' memory usage
 
     --help              display this help and exit
