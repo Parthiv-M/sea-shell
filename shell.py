@@ -1,34 +1,56 @@
 from os import system
 
+# For autocomplete and suggestions
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
+
 shell_commands = [
-    "help", 
-    "man", 
-    "searcher", 
-    "file", 
-    "checker", 
-    "mkdir", 
-    "rmdir", 
-    "rename", 
+    "help",
+    "man",
+    "searcher",
+    "file",
+    "checker",
+    "mkdir",
+    "rmdir",
+    "rename",
     "free",
     "ps",
-    "clear", 
+    "clear",
     "exit"
 ]
 
+def closestCommand(command):
+    closest_command=command
+    sys_command=shell_commands[0]
+    fuzzratio=fuzz.ratio(command, sys_command)
+    for sys_command in shell_commands:
+        if fuzz.ratio(command, sys_command) > fuzzratio and fuzz.ratio(command, sys_command)!=0:
+            fuzzratio=fuzz.ratio(command, sys_command)
+            closest_command=sys_command
+
+    return closest_command
+
+
 def shell_help():
-    f = open('startup_files/startup.txt', 'r')        
+    f = open('startup_files/startup.txt', 'r')
     print(f.read())
     print('\n')
 
 def shell():
     startup = 1
+    from_cmd_error = 0
     while 1:
         if startup == 1:
             startup = startup + 1
             _ = system('clear')
             shell_help()
 
-        userinput = input("\033[1msea-shell@\033[94muser\033[0m$ ")
+        if from_cmd_error == 0:
+            userinput = input("\033[1msea-shell@\033[94muser\033[0m$ ")
+        else:
+            userinput=closest_command+" "+userinput
+            from_cmd_error = 0
+
         input_arr = userinput.split()
 
         if(input_arr[0] == shell_commands[0]): # shell help
@@ -68,13 +90,19 @@ def shell():
         elif(input_arr[0] == shell_commands[9]):  # ps command
             if len(input_arr) == 2:
                 system('python3 ps.py ' + input_arr[1])
-            else: 
+            else:
                 system('python3 ps.py')
         elif(input_arr[0] == shell_commands[10]):  # clear command
             _ = system('clear')
         elif(input_arr[0] == shell_commands[11]):  # exit command
             exit(0)
         else:
-            print(input_arr[0] + ": command not found")
+            closest_command=closestCommand(input_arr[0])
+            userinput=input(input_arr[0] + ": command not found. Did you mean \n\t"+closest_command+"? (y/n):")
+            if userinput=='y' or userinput=='Y':
+                userinput=input("\033[1msea-shell@\033[94muser\033[0m$ "+closest_command)
+                from_cmd_error = 1;
+            else:
+                continue
 
 shell()
