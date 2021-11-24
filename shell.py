@@ -11,6 +11,7 @@ shell_commands = [
     "rename", 
     "free",
     "ps",
+    "tree",
     "clear", 
     "exit"
 ]
@@ -70,9 +71,12 @@ def shell():
                 system('python3 ps.py ' + input_arr[1])
             else: 
                 system('python3 ps.py')
-        elif(input_arr[0] == shell_commands[10]):  # clear command
+        elif(input_arr[0] == shell_commands[10]):  # ps command
+            if len(input_arr) == 2:
+                system('python3 tree.py ' + input_arr[1])
+        elif(input_arr[0] == shell_commands[11]):  # clear command
             _ = system('clear')
-        elif(input_arr[0] == shell_commands[11]):  # exit command
+        elif(input_arr[0] == shell_commands[12]):  # exit command
             exit(0)
         else:
             print(input_arr[0] + ": command not found")
