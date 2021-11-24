@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 Usage: tree [OPTION...] DIRECTORY
 Recursively display all files and subdirectories stemming from DIRECTORY.
 
     --help              display this help and exit
+=======
+Usage: tree [OPTION]... DIRECTORY
+Recursively display all files and subdirectories stemming from DIRECTORY.
+
+    --help              display this help and exit
+>>>>>>> 9962e48ed507de19b5f71efb52fd7b977f56cde1
