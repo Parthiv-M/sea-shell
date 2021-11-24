@@ -1,10 +1,12 @@
 import psutil
 import os
 import sys
+
 def if_not_exists(dir_path):
     if(os.path.exists(dir_path) == False):
         print('Cannot open \'' + dir_path + '\' (No such file or directory)')
         sys.exit()
+
 def is_open_file(fpath):
     for proc in psutil.process_iter():
         try:
@@ -19,9 +21,9 @@ def lsof(dir_path):
     if_not_exists(dir_path)
     entries = os.listdir(dir_path)
     for entry in entries:
-        p = is_open_file(dir_path+entry)
+        p = is_open_file(dir_path + '/' + entry)
         if not p == None:
-            print(entry+' \n--Opened by process = '+p.name()+'\n--PID = '+str(p.pid)+'\n')
+            print(entry + ' \n--Opened by process = '+ p.name() + '\n--PID = ' + str(p.pid) + '\n')
 
 if(sys.argv[1] == '--help'):
     f = open('help_files/help_lsof.txt', 'r')

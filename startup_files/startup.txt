@@ -18,6 +18,8 @@ Command Help
 - file : Returns information about a file 
 - checker : Checks for spelling mistakes in a text file 
 - searcher : Searches for a file in the file system 
+- free : Display amount of free memory and used memory in the system
+- tree : Recursively display all files and directories
 
 For further information on individual commands, try running the commands with the --help flag. Every command
 has its own manual page as well.

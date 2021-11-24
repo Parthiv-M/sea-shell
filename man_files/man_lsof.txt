@@ -1,7 +1,7 @@
 LSOF						SEA SHELL COMMAND MANUAL							LSOF
 
 NAME
-	lsof — lists all open files in a directory, with PID and name of process
+	lsof -- lists all open files in a directory, with PID and name of process
 
 SYNOPSIS
 	lsof [/DIR_PATH/] 
