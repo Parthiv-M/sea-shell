@@ -191,6 +191,7 @@ rope==0.17.0
 rsa==4.6
 Rtree==0.9.4
 ruamel-yaml==0.15.87
+scapy @ file:///home/conda/feedstock_root/build_artifacts/scapy_1618871256544/work
 scikit-image==0.16.2
 scikit-learn @ file:///tmp/build/80754af9/scikit-learn_1592502866053/work
 scipy==1.4.1
