@@ -13,8 +13,9 @@ shell_commands = [
     "rmdir", 
     "rename", 
     "free",
-    "ps",
+    "ps",    
     "tree",
+    "cat",
     "clear", 
     "exit"
 ]
@@ -116,9 +117,12 @@ def shell():
         elif(input_arr[0] == shell_commands[10]):  # tree command
             if len(input_arr) == 2:
                 system('python3 tree.py ' + input_arr[1])
-        elif(input_arr[0] == shell_commands[11]):  # clear command
+        elif(input_arr[0] == shell_commands[11]):  # cat command
+            if len(input_arr) == 2:
+                system('python3 cat.py ' + input_arr[1])
+        elif(input_arr[0] == shell_commands[12]):  # clear command
             _ = system('clear')
-        elif(input_arr[0] == shell_commands[12]):  # exit command
+        elif(input_arr[0] == shell_commands[13]):  # exit command
             exit(0)
         else:
             closest_command = closest_command_finder(input_arr[0])
