@@ -20,6 +20,16 @@ shell_commands = [
 ]
 
 def closest_command_finder(command):
+
+    """
+    Function to take a command string, find the closest matching command and return a possible match from the existing set of shell commands.
+    ...
+    Parameters
+    ----------
+    command : str 
+        The command to be analysed to find the closest match
+    """
+
     closest_command = command
     sys_command = shell_commands[0]
     fuzzratio = fuzz.ratio(command, sys_command)
@@ -31,11 +41,21 @@ def closest_command_finder(command):
     return closest_command
 
 def shell_help():
+
+    """
+    Function to display the help text for the shell on startup.
+    """
+
     f = open('startup_files/startup.txt', 'r')        
     print(f.read())
     print('\n')
 
 def shell():
+
+    """
+    Function that runs the shell.
+    """
+
     startup = 1
     from_cmd_error = 0
 
@@ -93,7 +113,7 @@ def shell():
                 system('python3 ps.py ' + input_arr[1])
             else: 
                 system('python3 ps.py')
-        elif(input_arr[0] == shell_commands[10]):  # ps command
+        elif(input_arr[0] == shell_commands[10]):  # tree command
             if len(input_arr) == 2:
                 system('python3 tree.py ' + input_arr[1])
         elif(input_arr[0] == shell_commands[11]):  # clear command
