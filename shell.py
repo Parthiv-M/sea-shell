@@ -1,5 +1,8 @@
 from os import system
 
+# For autocomplete and suggestions
+from fuzzywuzzy import fuzz
+
 shell_commands = [
     "help", 
     "man", 
@@ -16,6 +19,17 @@ shell_commands = [
     "exit"
 ]
 
+def closest_command_finder(command):
+    closest_command = command
+    sys_command = shell_commands[0]
+    fuzzratio = fuzz.ratio(command, sys_command)
+    for sys_command in shell_commands:
+        if fuzz.ratio(command, sys_command) > fuzzratio and fuzz.ratio(command, sys_command)!=0:
+            fuzzratio = fuzz.ratio(command, sys_command)
+            closest_command = sys_command
+
+    return closest_command
+
 def shell_help():
     f = open('startup_files/startup.txt', 'r')        
     print(f.read())
@@ -23,13 +37,21 @@ def shell_help():
 
 def shell():
     startup = 1
+    from_cmd_error = 0
+
     while 1:
         if startup == 1:
             startup = startup + 1
             _ = system('clear')
-            shell_help()
-
-        userinput = input("\033[1msea-shell@\033[94muser\033[0m$ ")
+            shell_help()        
+        
+        if (from_cmd_error == 0):
+            userinput = input("\033[1msea-shell@\033[94muser\033[0m$ ")
+            pass
+        else:
+            userinput = closest_command + " " + userinput
+            from_cmd_error = 0
+        
         input_arr = userinput.split()
 
         if(input_arr[0] == shell_commands[0]): # shell help
@@ -79,6 +101,12 @@ def shell():
         elif(input_arr[0] == shell_commands[12]):  # exit command
             exit(0)
         else:
-            print(input_arr[0] + ": command not found")
+            closest_command = closest_command_finder(input_arr[0])
+            userinput = input(input_arr[0] + ": command not found. Did you mean " + closest_command + "? (y/n): ")
+            if userinput == 'y' or userinput == 'Y':
+                userinput = input("\033[1msea-shell@\033[94muser\033[0m$ " + closest_command)
+                from_cmd_error = 1;
+            else:
+                continue
 
 shell()
