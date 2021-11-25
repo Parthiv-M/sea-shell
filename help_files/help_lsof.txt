@@ -1,0 +1,9 @@
+Usage:  
+    1. lsof 
+    2. lsof [DIR_PATH]
+    
+View the list of open files in a given directory, along with name and PID of process that opened the file.
+Specify directory path to list open files in that directory, or get list of open files in current working directory.
+
+    --help              display this help and exit
+   
