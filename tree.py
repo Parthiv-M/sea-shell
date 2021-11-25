@@ -3,6 +3,16 @@ import sys
 from termcolor import colored
 
 def tree(base_path):
+
+    """
+    Function to display all files and subdirectories stemming from a given directory
+    ...
+    Parameters
+    ----------
+    base_path : str
+        Base path from which to print the tree 
+    """
+
     for dirpath, dirs, files in os.walk(base_path):
         path = dirpath.split('/')
         output = '|' + (len(path)*'---') + '[' + os.path.basename(dirpath) + ']'
