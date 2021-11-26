@@ -89,12 +89,12 @@ def shell():
             system('python3 checker.py ' + input_arr[1])
         elif(input_arr[0] == shell_commands[5]):  # make directory command
             if len(input_arr) == 3:
-                system('python3 mkdir.py ' + input_arr[1] + input_arr[2])
+                system('python3 mkdir.py ' + input_arr[1] + ' ' + input_arr[2])
             elif len(input_arr) == 2:
                 system('python3 mkdir.py ' + input_arr[1])
         elif(input_arr[0] == shell_commands[6]):  # remove directory command
             if len(input_arr) == 3:
-                system('python3 rmdir.py ' + input_arr[1] + input_arr[2])
+                system('python3 rmdir.py ' + input_arr[1] + ' ' + input_arr[2])
             elif len(input_arr) == 2:
                 system('python3 rmdir.py ' + input_arr[1])
         elif(input_arr[0] == shell_commands[7]):  # rename command
