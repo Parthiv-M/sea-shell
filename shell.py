@@ -16,6 +16,7 @@ shell_commands = [
     "ps",    
     "tree",
     "cat",
+    "pwd",
     "clear", 
     "exit"
 ]
@@ -77,7 +78,7 @@ def shell():
 
         if(input_arr[0] == shell_commands[0]): # shell help
             shell_help()
-        elif(len(input_arr) == 1 and (input_arr[0] in shell_commands) and input_arr[0] != 'exit' and input_arr[0] != 'clear' and input_arr[0] != 'free' and input_arr[0] != 'ps'):
+        elif(len(input_arr) == 1 and (input_arr[0] in shell_commands) and input_arr[0] != 'exit' and input_arr[0] != 'clear' and input_arr[0] != 'free' and input_arr[0] != 'ps' and input_arr[0] != 'pwd'):
             system('python3 ' + input_arr[0] + '.py --help')
         elif(input_arr[0] == shell_commands[1]):
             system('python ' + input_arr[1] + '.py ' + input_arr[0]) # man page for every command
@@ -120,9 +121,14 @@ def shell():
         elif(input_arr[0] == shell_commands[11]):  # cat command
             if len(input_arr) == 2:
                 system('python3 cat.py ' + input_arr[1])
-        elif(input_arr[0] == shell_commands[12]):  # clear command
+        elif(input_arr[0] == shell_commands[12]):  # ps command
+            if len(input_arr) == 2:
+                system('python3 pwd.py ' + input_arr[1])
+            else: 
+                system('python3 pwd.py')
+        elif(input_arr[0] == shell_commands[13]):  # clear command
             _ = system('clear')
-        elif(input_arr[0] == shell_commands[13]):  # exit command
+        elif(input_arr[0] == shell_commands[14]):  # exit command
             exit(0)
         else:
             closest_command = closest_command_finder(input_arr[0])
