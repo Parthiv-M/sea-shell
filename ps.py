@@ -19,6 +19,8 @@ elif(len(sys.argv) == 2):
     if(sys.argv[1] == '--help'):
         f = open('help_files/help_ps.txt', 'r')
         print(f.read())
+    elif(sys.argv[1] == "--version" or sys.argv[1] == "-v"):
+        print("ps (sea shell) 1.0.0")
     elif(sys.argv[1] == "man"):
         f = open('man_files/man_ps.txt', 'r')
         print(f.read())

@@ -8,6 +8,8 @@ SYNOPSIS
 	rmdir [--help]
 
 DESCRIPTION
+	This manual page documents version 1.0.0 of the rmdir command.
+
 	Remove a directory in the PARENT_DIRECTORY with the name DIRECTORY_NAME, if they exist
 
 AUTHOR

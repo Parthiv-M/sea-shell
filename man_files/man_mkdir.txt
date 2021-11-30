@@ -8,6 +8,8 @@ SYNOPSIS
 	makedir [--help]
 
 DESCRIPTION
+	This manual page documents version 1.0.0 of the mkdir command.
+
 	Create a directory in the PARENT_DIRECTORY with the name DIRECTORY_NAME, if they donot already exist
 
 	optional parameters

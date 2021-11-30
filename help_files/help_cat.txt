@@ -5,4 +5,5 @@ Usage:
 View contents of file, Create new file/append input to file, append contents of one file to another
 
     --help              display this help and exit
+    --version           output version information and exit
     

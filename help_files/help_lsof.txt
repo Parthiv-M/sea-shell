@@ -6,4 +6,5 @@ View the list of open files in a given directory, along with name and PID of pro
 Specify directory path to list open files in that directory, or get list of open files in current working directory.
 
     --help              display this help and exit
+    --version           output version information and exit
    

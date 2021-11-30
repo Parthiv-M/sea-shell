@@ -8,9 +8,9 @@ SYNOPSIS
 	searcher [--help]
 
 DESCRIPTION
-	This manual page documents version 1.0.0 of the searcher command. The entire path of the first file with the matching name will be printed.
-
-	The path is printed along with the file extension of the corresponding file found.
+	This manual page documents version 1.0.0 of the searcher command. 
+	
+	The entire path of the first file with the matching name will be printed. The path is printed along with the file extension of the corresponding file found.
 
 	If a file with the given file name is not found, an error message is printed.
 

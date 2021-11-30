@@ -7,6 +7,8 @@ SYNOPSIS
 	pwd
 
 DESCRIPTION
+	This manual page documents version 1.0.0 of the pwd command.
+
 	Print the full filename of the current working directory
 
 AUTHOR

@@ -8,6 +8,8 @@ SYNOPSIS
 	rename [--help]
 
 DESCRIPTION
+	This manual page documents version 1.0.0 of the rename command.
+
 	Rename the file with OLD_NAME to NEW_NAME
 
 AUTHOR

@@ -8,6 +8,8 @@ SYNOPSIS
     file [--help]
 
 DESCRIPTION
+    This manual page documents version 1.0.0 of the file command.
+
     file tests each argument in an attempt to classify it
 
 AUTHOR

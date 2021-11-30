@@ -2,3 +2,4 @@ Usage: tree [OPTION]... DIRECTORY
 Recursively display all files and subdirectories stemming from DIRECTORY.
 
     --help              display this help and exit
+    --version           output version information and exit

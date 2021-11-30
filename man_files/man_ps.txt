@@ -7,6 +7,8 @@ SYNOPSIS
 	ps [options]
 
 DESCRIPTION
+	This manual page documents version 1.0.0 of the ps command.
+
 	display a list of all the active processes along with their process ID, name and CPU percent.
 
 AUTHOR

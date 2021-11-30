@@ -2,3 +2,4 @@ Usage: rename OLD_NAME NEW_NAME
 Renames an existing FILE or DIRECTORY with a NEW_NAME
 
     --help				display this help and exit
+    --version           output version information and exit

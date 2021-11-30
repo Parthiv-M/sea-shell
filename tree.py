@@ -24,6 +24,8 @@ def tree(base_path):
 if(sys.argv[1] == '--help'):
     f = open('help_files/help_tree.txt', 'r')
     print(f.read())
+elif(sys.argv[1] == "--version" or sys.argv[1] == "-v"):
+    print("tree (sea shell) 1.0.0")
 elif(sys.argv[1] == "man"):
     f = open('man_files/man_tree.txt', 'r')
     print(f.read())

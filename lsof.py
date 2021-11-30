@@ -21,7 +21,6 @@ def is_open_file(fpath):
             pass
     return False
 
-# base_path = '/home/rithika/Downloads'
 def lsof(dir_path):
     if_not_exists(dir_path)
     entries = os.listdir(dir_path+'/')
@@ -44,11 +43,10 @@ elif(len(sys.argv) == 2):
     if(sys.argv[1] == '--help'):
         f = open('help_files/help_lsof.txt', 'r')
         print(f.read())
+    elif(sys.argv[1] == "--version" or sys.argv[1] == "-v"):
+        print("lsof (sea shell) 1.0.0")
     elif(sys.argv[1] == "man"):
         f = open('man_files/man_lsof.txt', 'r')
         print(f.read())
     else:
         lsof(sys.argv[1])
-        
-# lsof_cur()
-

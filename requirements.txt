@@ -1,4 +1,9 @@
+certifi==2021.10.8
+charset-normalizer==2.0.8
 fuzzywuzzy==0.18.0
+idna==3.3
 psutil==5.8.0
 python-magic==0.4.24
+requests==2.26.0
 termcolor==1.1.0
+urllib3==1.26.7

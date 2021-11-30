@@ -22,6 +22,8 @@ def file_command(file_name):
 if(sys.argv[1] == '--help'):
     f = open('help_files/help_file.txt', 'r')
     print(f.read())
+elif(sys.argv[1] == "--version" or sys.argv[1] == "-v"):
+    print("file (sea shell) 1.0.0")
 elif(sys.argv[1] == "man"):
     f = open('man_files/man_file.txt', 'r')
     print(f.read())

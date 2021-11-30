@@ -20,6 +20,8 @@ def rnm(old_nm, new_nm):
 if(sys.argv[1] == '--help'):
     f = open('help_files/help_rename.txt', 'r')        
     print(f.read())
+elif(sys.argv[1] == "--version" or sys.argv[1] == "-v"):
+    print("rename (sea shell) 1.0.0")
 elif(sys.argv[1] == "man"):
     f = open('man_files/man_rename.txt', 'r')        
     print(f.read())

@@ -2,3 +2,4 @@ Usage: rmdir [OPTION]... DIRECTORY...
 Remove the DIRECTORY(ies), if they are empty.
 
     --help				display this help and exit
+    --version           output version information and exit
