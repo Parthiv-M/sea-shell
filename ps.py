@@ -11,7 +11,7 @@ def ps():
     print('---------------------------------------------------------------------')
     for proc in psutil.process_iter():
         procs_info = proc.as_dict(attrs = ['pid','name','cpu_percent'])
-        print("{}\t\t{:40s}\t{:1.1}".format(procs_info['pid'], procs_info['name'], procs_info['cpu_percent']))
+        print("{}\t\t{:40s}\t{}".format(procs_info['pid'], procs_info['name'], procs_info['cpu_percent']))
 
 if(len(sys.argv) == 1):
     ps()
