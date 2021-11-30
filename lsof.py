@@ -6,6 +6,7 @@ def if_not_exists(dir_path):
     if(os.path.exists(dir_path) == False):
         print('Cannot open \'' + dir_path + '\' (No such file or directory)')
         sys.exit()
+
 def is_open_file(fpath):
     for proc in psutil.process_iter():
         try:
@@ -37,9 +38,9 @@ def lsof_cur():
         if not p == False:
             print(entry+' \n--Opened by process = '+p.name()+'\n--PID = '+str(p.pid)+'\n')
 
-if(len(sys.argv)==1): 
+if(len(sys.argv) == 1): 
     lsof_cur()
-elif(len(sys.argv)==2):
+elif(len(sys.argv) == 2):
     if(sys.argv[1] == '--help'):
         f = open('help_files/help_lsof.txt', 'r')
         print(f.read())
