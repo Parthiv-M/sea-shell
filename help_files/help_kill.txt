@@ -1,0 +1,7 @@
+Usage: 
+    kill [PID] 
+    
+Send a signal to a process specified by its PID, to end that particualar process.
+
+    --help              display this help and exit
+    
