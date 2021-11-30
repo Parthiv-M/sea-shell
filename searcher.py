@@ -2,14 +2,12 @@ import os
 import sys
 
 def searcher(paths, word):
-    for path in paths:
-        ind = path.find(word)
-        if(ind != -1):
-            print(path)
-            break
-        else:
-            print("Could not find a file that contains your file name")
-            break
+    print(word)
+    for p in paths:
+        if(p.find(word) != -1):
+            print("Path of your file is: " + p)
+            return
+    print("Could not find a file that contains your file name")
 
 def file_searcher(root, word):
     filePaths = []
@@ -17,7 +15,6 @@ def file_searcher(root, word):
     for root, dirs, files in os.walk(root):
         for f in files:
             filePaths.append(os.path.join(root, f))
-    print(filePaths)
     searcher(filePaths, word)
 
 filename = sys.argv[1]
@@ -29,4 +26,4 @@ elif(sys.argv[1] == "man"):
     f = open('man_files/man_searcher.txt', 'r')        
     print(f.read())
 else:
-    file_searcher('/home/parthiv/Desktop', sys.argv[1])
+    file_searcher('/', sys.argv[1])
