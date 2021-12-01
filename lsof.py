@@ -3,11 +3,31 @@ import os
 import sys
 
 def if_not_exists(dir_path):
+
+    """
+    Function to check if the given directory path exists
+    ...
+    Parameters
+    ----------
+    dir_path : str
+        Path of the directory
+    """
+
     if(os.path.exists(dir_path) == False):
         print('Cannot open \'' + dir_path + '\' (No such file or directory)')
         sys.exit()
 
 def is_open_file(fpath):
+
+    """
+    Function to check if a file is open or not
+    ...
+    Parameters
+    ----------
+    fpath : str
+        Name or path of the file to check for
+    """
+
     for proc in psutil.process_iter():
         try:
             for item in proc.open_files():
@@ -22,6 +42,16 @@ def is_open_file(fpath):
     return False
 
 def lsof(dir_path):
+
+    """
+    Function to list all the open processes
+    ...
+    Parameters
+    ----------
+    dir_path : str
+        Path of the directory to search open processes for
+    """
+
     if_not_exists(dir_path)
     entries = os.listdir(dir_path+'/')
     for entry in entries:
@@ -30,12 +60,17 @@ def lsof(dir_path):
             print(entry+' \n--Opened by process = '+p.name()+'\n--PID = '+str(p.pid)+'\n')
 
 def lsof_cur():
+
+    """
+    Function to check for open processes or applications in the current directory
+    """
+
     dir_path = os.getcwd()
-    entries = os.listdir(dir_path+'/')
+    entries = os.listdir(dir_path + '/')
     for entry in entries:
-        p = is_open_file(dir_path+'/'+entry)
+        p = is_open_file(dir_path + '/' + entry)
         if not p == False:
-            print(entry+' \n--Opened by process = '+p.name()+'\n--PID = '+str(p.pid)+'\n')
+            print(entry + ' \n--Opened by process = ' + p.name() + '\n--PID = ' + str(p.pid) + '\n')
 
 if(len(sys.argv) == 1): 
     lsof_cur()
