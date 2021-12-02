@@ -12,14 +12,21 @@ Welcome to the Sea Shell. The crew will now take you through the process of oper
 
 Command Help
 ============
-- mkdir : Creates a new directory
-- rmdir : Removes an existing empty directory 
+- forge : Creates a new directory
+- dismantle : Removes an existing empty directory 
 - rename : Renames an existing directory 
-- file : Returns information about a file 
-- checker : Checks for spelling mistakes in a text file 
-- searcher : Searches for a file in the file system 
-- free : Display amount of free memory and used memory in the system
-- tree : Recursively display all files and directories
+- fish : Returns information about a file 
+- review : Checks for spelling mistakes in a text file 
+- dive : Searches for a file in the file system 
+- engine : Display amount of free memory and used memory in the system
+- treasure-trail : Recursively display all files and directories
+- cargo : View the list of open files in a given directory
+- glance : Concatenates files and prints as output
+- kill : Send a signal to a process to terminate it
+- locate : Print name of current/working directory
+- radar : Display a list of all the active processes along with process ID
+
+Worry not if you mess up or forget a command. Fuzzy autocomplete helps you find the right command every time.
 
 For further information on individual commands, try running the commands with the --help flag. Every command
 has its own manual page as well.
