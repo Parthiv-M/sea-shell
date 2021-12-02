@@ -10,7 +10,7 @@ def kill(pid):
     pid : str
         Process ID of the process to kill
     """
-
+    
     for proc in psutil.process_iter():
         procs_info = proc.as_dict(attrs = ['pid','name','cpu_percent', 'cmdline'])
         try:

@@ -1,14 +1,14 @@
-MKDIR(1)                                    SEA SHELL COMMAND MANUAL                                      MKDIR(1)
+FORGE(1)                                    SEA SHELL COMMAND MANUAL                                      FORGE(1)
 
 NAME
-	makedir -- make a directory
+	forge -- make a directory
 
 SYNOPSIS
-	makedir PARENT_DIRECTORY DIRECTORY_NAME
-	makedir [--help]
+	forge PARENT_DIRECTORY DIRECTORY_NAME
+	forge [--help]
 
 DESCRIPTION
-	This manual page documents version 1.0.0 of the mkdir command.
+	This manual page documents version 1.0.0 of the forge command.
 
 	Create a directory in the PARENT_DIRECTORY with the name DIRECTORY_NAME, if they donot already exist
 

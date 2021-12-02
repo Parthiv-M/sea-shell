@@ -1,4 +1,4 @@
-Usage: checker [FILE...]
+Usage: review [FILE...]
 Check a text file for spelling mistakes
 
     --help              display this help and exit

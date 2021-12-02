@@ -1,4 +1,4 @@
-Usage: tree [OPTION]... DIRECTORY
+Usage: treasure-trail [OPTION]... DIRECTORY
 Recursively display all files and subdirectories stemming from DIRECTORY.
 
     --help              display this help and exit

@@ -1,4 +1,4 @@
-Usage: file [FILE...]
+Usage: fish [FILE...]
 Determine type of FILEs
 
     --help              display this help and exit

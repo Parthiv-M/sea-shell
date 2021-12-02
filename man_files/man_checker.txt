@@ -1,14 +1,14 @@
-CHECKER						SEA SHELL COMMAND MANUAL							CHECKER
+REVIEW						SEA SHELL COMMAND MANUAL							REVIEW
 
 NAME
-	checker -- check text file for spelling mistakes
+	review -- check text file for spelling mistakes
 
 SYNOPSIS
-	checker FILE_NAME
-	checker [--help]
+	review FILE_NAME
+	review [--help]
 
 DESCRIPTION
-	This manual page documents version 1.0.0 of the checker command.
+	This manual page documents version 1.0.0 of the review command.
 
 	Check the text file for any spelling mistakes made. If found, report the mistake made and provide a suggestion
 

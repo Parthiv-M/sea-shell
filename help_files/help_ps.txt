@@ -1,4 +1,4 @@
-Usage: ps 
+Usage: radar
 Display processes
 
     --help				display this help and exit

@@ -1,4 +1,4 @@
-Usage: searcher [FILE...]
+Usage: dive [FILE...]
 Search for a file by file name in the file directory of the system
 
 	--help				display this help and exit

@@ -1,13 +1,13 @@
-PWD(1)                                    SEA SHELL COMMAND MANUAL                                      PWD(1)
+LOCATE(1)                                    SEA SHELL COMMAND MANUAL                                      LOCATE(1)
 
 NAME
-	pwd -- print name of current/working directory
+	locate -- print name of current/working directory
 
 SYNOPSIS
-	pwd
+	locate
 
 DESCRIPTION
-	This manual page documents version 1.0.0 of the pwd command.
+	This manual page documents version 1.0.0 of the locate command.
 
 	Print the full filename of the current working directory
 

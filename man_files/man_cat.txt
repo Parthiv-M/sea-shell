@@ -1,14 +1,14 @@
-CAT						SEA SHELL COMMAND MANUAL							CAT
+GLANCE						SEA SHELL COMMAND MANUAL							GLANCE
 
 NAME
-	cat — concatenates files and prints as output
+	glance — concatenates files and prints as output
 
 SYNOPSIS
-	cat [>][FILENAME][>>FILENAME2] 
-	cat [--help]
+	glance [>][FILENAME][>>FILENAME2] 
+	glance [--help]
 
 DESCRIPTION
-	This manual page documents version 1.0.0 of the cat command. 
+	This manual page documents version 1.0.0 of the glance command. 
 
 	Usage 1: contents of file is printed on standard output
 	Usage 2: input from user is appended to file

@@ -1,14 +1,14 @@
-RMDIR(1)                        SEA SHELL COMMAND MANUAL                                       RMDIR(1)
+DISMANTLE(1)                        SEA SHELL COMMAND MANUAL                                       DISMANTLE(1)
 
 NAME
-	rmdir -- remove a directory
+	dismantle -- remove a directory
 
 SYNOPSIS
-	rmdir PARENT_DIRECTORY DIRECTORY_NAME
-	rmdir [--help]
+	dismantle PARENT_DIRECTORY DIRECTORY_NAME
+	dismantle [--help]
 
 DESCRIPTION
-	This manual page documents version 1.0.0 of the rmdir command.
+	This manual page documents version 1.0.0 of the dismantle command.
 
 	Remove a directory in the PARENT_DIRECTORY with the name DIRECTORY_NAME, if they exist
 

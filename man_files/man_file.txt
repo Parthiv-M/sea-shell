@@ -1,14 +1,14 @@
-FILE						SEA SHELL COMMAND MANUAL							FILE
+FISH						SEA SHELL COMMAND MANUAL							FISH
 
 NAME
-    file — determine file type
+    fish — determine file type
 
 SYNOPSIS
-    file FILENAME
-    file [--help]
+    fish FILENAME
+    fish [--help]
 
 DESCRIPTION
-    This manual page documents version 1.0.0 of the file command.
+    This manual page documents version 1.0.0 of the fish command.
 
     file tests each argument in an attempt to classify it
 

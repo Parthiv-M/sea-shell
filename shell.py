@@ -3,21 +3,24 @@ from os import system
 # For autocomplete and suggestions
 from fuzzywuzzy import fuzz
 
-shell_commands = [
-    "help", 
-    "man", 
-    "searcher", 
-    "file", 
-    "checker", 
-    "mkdir", 
-    "rmdir", 
+# sea shell command names
+sea_shell_commands = [
+    "sos", 
+    "treasure-map", 
+    "dive", 
+    "fish", 
+    "review", 
+    "forge", 
+    "dismantle", 
     "rename", 
-    "free",
-    "ps",    
-    "tree",
-    "cat",
-    "pwd",
-    "clear", 
+    "engine",
+    "radar",    
+    "treasure-trail",
+    "glance",
+    "locate",
+    "cargo",
+    "kill",
+    "wipe", 
     "exit"
 ]
 
@@ -33,9 +36,9 @@ def closest_command_finder(command):
     """
 
     closest_command = command
-    sys_command = shell_commands[0]
+    sys_command = sea_shell_commands[0]
     fuzzratio = fuzz.ratio(command, sys_command)
-    for sys_command in shell_commands:
+    for sys_command in sea_shell_commands:
         if fuzz.ratio(command, sys_command) > fuzzratio and fuzz.ratio(command, sys_command)!=0:
             fuzzratio = fuzz.ratio(command, sys_command)
             closest_command = sys_command
@@ -75,60 +78,67 @@ def shell():
             from_cmd_error = 0
         
         input_arr = userinput.split()
-
-        if(input_arr[0] == shell_commands[0]): # shell help
+        if(input_arr[0] == sea_shell_commands[0]): # shell help
             shell_help()
-        elif(len(input_arr) == 1 and (input_arr[0] in shell_commands) and input_arr[0] != 'exit' and input_arr[0] != 'clear' and input_arr[0] != 'free' and input_arr[0] != 'ps' and input_arr[0] != 'pwd'):
+        elif(len(input_arr) == 1 and (input_arr[0] in sea_shell_commands) and input_arr[0] != 'exit' and input_arr[0] != 'wipe' and input_arr[0] != 'engine' and input_arr[0] != 'radar' and input_arr[0] != 'locate' and input_arr[0] != 'cargo'):
             system('python3 ' + input_arr[0] + '.py --help')
-        elif(input_arr[0] == shell_commands[1]):
-            system('python ' + input_arr[1] + '.py ' + input_arr[0]) # man page for every command
-        elif(input_arr[0] == shell_commands[2]):  # file searcher command
-            system('python3 searcher.py ' + input_arr[1])
-        elif(input_arr[0] == shell_commands[3]):  # file command
-            system('python3 file.py ' + input_arr[1])
-        elif(input_arr[0] == shell_commands[4]):  # spell checker command
-            system('python3 checker.py ' + input_arr[1])
-        elif(input_arr[0] == shell_commands[5]):  # make directory command
+        elif(input_arr[0] == sea_shell_commands[1]):
+            system('python ' + sea_shell_commands[1] + '.py ' + input_arr[0]) # man page for every command
+        elif(input_arr[0] == sea_shell_commands[2]):  # file searcher command
+            system('python3 dive.py ' + input_arr[1])
+        elif(input_arr[0] == sea_shell_commands[3]):  # file command
+            system('python3 fish.py ' + input_arr[1])
+        elif(input_arr[0] == sea_shell_commands[4]):  # spell checker command
+            system('python3 review.py ' + input_arr[1])
+        elif(input_arr[0] == sea_shell_commands[5]):  # make directory command
             if len(input_arr) == 3:
-                system('python3 mkdir.py ' + input_arr[1] + ' ' + input_arr[2])
+                system('python3 forge.py ' + input_arr[1] + ' ' + input_arr[2])
             elif len(input_arr) == 2:
-                system('python3 mkdir.py ' + input_arr[1])
-        elif(input_arr[0] == shell_commands[6]):  # remove directory command
+                system('python3 forge.py ' + input_arr[1])
+        elif(input_arr[0] == sea_shell_commands[6]):  # remove directory command
             if len(input_arr) == 3:
-                system('python3 rmdir.py ' + input_arr[1] + ' ' + input_arr[2])
+                system('python3 dismantle.py ' + input_arr[1] + ' ' + input_arr[2])
             elif len(input_arr) == 2:
-                system('python3 rmdir.py ' + input_arr[1])
-        elif(input_arr[0] == shell_commands[7]):  # rename command
+                system('python3 dismantle.py ' + input_arr[1])
+        elif(input_arr[0] == sea_shell_commands[7]):  # rename command
             if len(input_arr) == 3:
                 system('python3 rename.py ' + input_arr[1] + input_arr[2])
             elif len(input_arr) == 2:
                 system('python3 rename.py ' + input_arr[1])
-        elif(input_arr[0] == shell_commands[8]):  # free command
+        elif(input_arr[0] == sea_shell_commands[8]):  # free command
             if len(input_arr) == 3:
-                system('python3 free.py ' + input_arr[1] + input_arr[2])
+                system('python3 engine.py ' + input_arr[1] + input_arr[2])
             elif len(input_arr) == 2:
-                system('python3 free.py ' + input_arr[1])
+                system('python3 engine.py ' + input_arr[1])
             elif len(input_arr) == 1:
-                system('python3 free.py')
-        elif(input_arr[0] == shell_commands[9]):  # ps command
+                system('python3 engine.py')
+        elif(input_arr[0] == sea_shell_commands[9]):  # ps command
             if len(input_arr) == 2:
-                system('python3 ps.py ' + input_arr[1])
+                system('python3 radar.py ' + input_arr[1])
             else: 
-                system('python3 ps.py')
-        elif(input_arr[0] == shell_commands[10]):  # tree command
+                system('python3 radar.py')
+        elif(input_arr[0] == sea_shell_commands[10]):  # tree command
             if len(input_arr) == 2:
-                system('python3 tree.py ' + input_arr[1])
-        elif(input_arr[0] == shell_commands[11]):  # cat command
+                system('python3 treasure-trail.py ' + input_arr[1])
+        elif(input_arr[0] == sea_shell_commands[11]):  # cat command
             if len(input_arr) == 2:
-                system('python3 cat.py ' + input_arr[1])
-        elif(input_arr[0] == shell_commands[12]):  # ps command
+                system('python3 glance.py ' + input_arr[1])
+        elif(input_arr[0] == sea_shell_commands[12]):  # ps command
             if len(input_arr) == 2:
-                system('python3 pwd.py ' + input_arr[1])
+                system('python3 locate.py ' + input_arr[1])
             else: 
-                system('python3 pwd.py')
-        elif(input_arr[0] == shell_commands[13]):  # clear command
+                system('python3 locate.py')
+        elif(input_arr[0] == sea_shell_commands[13]):  # lsof command
+            if len(input_arr) == 2:
+                system('python3 cargo.py ' + input_arr[1])
+            else: 
+                system('python3 cargo.py')
+        elif(input_arr[0] == sea_shell_commands[14]):  # kill command
+            if len(input_arr) == 2:
+                system('python3 kill.py ' + input_arr[1])
+        elif(input_arr[0] == sea_shell_commands[15]):  # clear command
             _ = system('clear')
-        elif(input_arr[0] == shell_commands[14]):  # exit command
+        elif(input_arr[0] == sea_shell_commands[16]):  # exit command
             exit(0)
         else:
             closest_command = closest_command_finder(input_arr[0])
