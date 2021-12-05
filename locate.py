@@ -17,7 +17,7 @@ elif(len(sys.argv) == 2):
         print(f.read())
     elif(sys.argv[1] == "--version" or sys.argv[1] == "-v"):
         print("pwd (sea shell) 1.0.0")
-    elif(sys.argv[1] == "man"):
+    elif(sys.argv[1] == "treasure-map"):
         f = open('man_files/man_pwd.txt', 'r')
         print(f.read())
     

@@ -26,7 +26,7 @@ if(sys.argv[1] == '--help'):
     print(f.read())
 elif(sys.argv[1] == "--version" or sys.argv[1] == "-v"):
     print("tree (sea shell) 1.0.0")
-elif(sys.argv[1] == "man"):
+elif(sys.argv[1] == "treasure-map"):
     f = open('man_files/man_tree.txt', 'r')
     print(f.read())
 else:
