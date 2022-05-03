@@ -40,4 +40,4 @@ If you have completed all the above steps successfully, then you should see a sc
 Congratulations! You have successfully run the Sea Shell!
 
 # Contributors
-The Sea Shell was built by a team of four people including [Parthiv Menon](), [Raghav Thakar](), [Jayant Shanmugam](), and [Ritika Tirumeni]()
+The Sea Shell was built by a team of four people including [Parthiv Menon](https://github.com/Parthiv-M), [Raghav Thakar](https://github.com/raghavthakar), [Jayant Shanmugam](https://github.com/Jayanth-Shanmugam), and [Ritika Tirumeni](https://github.com/RithikaThirumeni)
